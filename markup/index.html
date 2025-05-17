@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учет расходов</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Учет расходов</h1>
+
+        <div class="expense-form">
+            <h2>Добавить расходы</h2>
+            <form id="expense-form">
+                <label for="expense-name">Наименование расхода:</label>
+                <input type="text" id="expense-name" placeholder="Например, еда" required />
+                <label for="expense-amount">Стоимость:</label>
+                <input type="number" id="expense-amount" placeholder="Amount" required />
+                
+                <fieldset>
+                    <legend>Категория:</legend>
+                    <label><input type="radio" name="expense-category" value="Food" required /> Еда</label>
+                    <label><input type="radio" name="expense-category" value="Transport" required /> Транспорт</label>
+                    <label><input type="radio" name="expense-category" value="Entertainment" required /> Развлечения</label>
+                    <label><input type="radio" name="expense-category" value="Other" required /> Другое</label>
+                </fieldset>
+
+                <button type="submit">Добавить расходы</button>
+            </form>
+        </div>
+
+        <div class="expense-filter">
+            <label for="category-filter">Фильтр по категориям:</label>
+            <select id="category-filter">
+                <option value="all">Все</option>
+                <option value="Food">Еда</option>
+                <option value="Transport">Транспорт</option>
+                <option value="Entertainment">Развлечения</option>
+                <option value="Other">Другое</option>
+            </select>
+
+            <label><input type="checkbox" id="max-amount-filter" /> Показывать расходы более 5000</label>
+        </div>
+
+        <div class="expense-list">
+            <h2>Список расходов</h2>
+            <ul id="expense-list">
+                
+            </ul>
+        </div>
+    </div>
+    <script src="expenses.js"></script>
+</body>
+</html>
